@@ -1,5 +1,9 @@
 # LangGraph Chat Bot Starter
 
+
+<img width="1536" height="1024" alt="ChatGPT Image Apr 25, 2026, 09_43_24 AM" src="https://github.com/user-attachments/assets/2325b584-9d9d-44bf-9fbb-07c91864880b" />
+
+
 A clean, simple starter template for building AI chat applications with LangGraph, streaming, and tool support.
 
 Perfect for beginners to learn and experienced developers to build upon.
