@@ -1,0 +1,6 @@
+[
+  "search_device",
+  "list_guides",
+  "get_guide_details",
+  "web_search"
+]

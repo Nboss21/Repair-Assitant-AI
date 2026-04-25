@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  /* Dark Purple Theme - Premium & Aesthetic */
+  --color-background: oklch(15% 0.05 285);      /* Deep rich purple/black */
+  --color-foreground: oklch(98% 0.01 290);      /* Soft white/lavender hint */
+  
+  --color-card: oklch(18% 0.06 285);            /* Slightly lighter deep purple */
+  --color-card-foreground: oklch(98% 0.01 290);
+  
+  --color-popover: oklch(18% 0.06 285);
+  --color-popover-foreground: oklch(98% 0.01 290);
+  
+  --color-primary: oklch(65% 0.22 295);         /* Vibrant Electric Purple */
+  --color-primary-foreground: oklch(98% 0.02 295);
+  
+  --color-secondary: oklch(25% 0.08 285);       /* Muted purple for secondary actions */
+  --color-secondary-foreground: oklch(98% 0.01 290);
+  
+  --color-muted: oklch(25% 0.04 285);
+  --color-muted-foreground: oklch(75% 0.05 290);
+  
+  --color-accent: oklch(65% 0.22 295);          /* Matching primary for accents */
+  --color-accent-foreground: oklch(98% 0.02 295);
+  
+  --color-destructive: oklch(40% 0.2 20);       /* Soft red */
+  --color-destructive-foreground: oklch(98% 0 0);
+  
+  --color-border: oklch(25% 0.06 285);
+  --color-input: oklch(25% 0.06 285);
+  --color-ring: oklch(65% 0.22 295);
+  
+  /* Radii */
+  --radius: 0.75rem; /* More rounded for modern feel */
+}
+
+/* Global resets and typography */
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling for a cleaner look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+
+/* ChatGPT-style Streaming Cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.streaming-cursor > *:last-child::after {
+  content: "▍";
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+  color: var(--color-primary);
+  vertical-align: baseline;
+  font-weight: bold;
+}
